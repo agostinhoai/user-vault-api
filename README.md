@@ -1,11 +1,11 @@
-# User Backend API
+# User Vault API
 
-A robust REST API built with Express.js and MongoDB for user management and contact storage.
+A modern RESTful API built with Express.js and MongoDB that combines secure user account management with comprehensive contact operations. Features JWT authentication, user profiles, contact management, and automated testing suite.
 
 ## Features
 
 - User Authentication (Register, Login, JWT)
-- Contact Management (CRUD operations)
+- Contact Management 
 - MongoDB Integration
 - Error Handling
 - Input Validation
@@ -21,8 +21,8 @@ A robust REST API built with Express.js and MongoDB for user management and cont
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/userBackendAPI.git
-cd userBackendAPI
+git clone https://github.com/yourusername/user-vault-api.git
+cd user-vault-api
 ```
 
 2. Install dependencies:
@@ -71,19 +71,16 @@ npm test
 
 ## Testing
 
-The API includes comprehensive test suites:
-- User authentication tests
-- Contact management tests
+The API includes comprehensive test suites and a detailed testing guide:
+- See `TESTING.md` for API testing instructions
+- Postman collection included for API testing
+- Automated tests for all endpoints
 - Error handling tests
 
-Run tests with:
+Run automated tests with:
 ```bash
 npm test
 ```
-
-## Documentation
-
-- Postman collection included for API testing
 
 ## Error Handling
 

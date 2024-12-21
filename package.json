@@ -1,7 +1,7 @@
 {
-  "name": "userbackendapi",
+  "name": "user-vault-api",
   "version": "1.0.0",
-  "description": "Express backend API for user management and data handling.",
+  "description": "Full-featured REST API combining user authentication and contact management, built with Express.js and MongoDB",
   "main": "server.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
@@ -9,10 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "userBackendAPI"
+    "url": "user-vault-api"
   },
   "keywords": [
-    "nodejs"
+    "nodejs",
+    "rest-api",
+    "contacts",
+    "authentication",
+    "express"
   ],
   "author": "Leo",
   "license": "MIT",
