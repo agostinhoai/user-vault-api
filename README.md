@@ -1,78 +1,94 @@
-# UserBackendAPI
+# User Backend API
 
-UserBackendAPI is a Node.js-based backend API for user management and data handling. It uses Express.js as the web framework and MongoDB for data storage. It has a comprehensive set of features for managing user accounts and their associated data.
-
-## Key Components
-
-The API is designed with a focus on:
-
-- **User Management**: Handles user registration, authentication, and profile management.
-- **Contact Management**: Allows users to create, read, update, and delete contact information.
-- **JWT Authentication**: Secures API endpoints using JSON Web Tokens.
-- **Database Integration**: Utilizes MongoDB for efficient data storage and retrieval.
-
+A robust REST API built with Express.js and MongoDB for user management and contact storage.
 
 ## Features
 
-- User registration
-- User login
-- JWT Authentication
-- Create Contact
-- Get Contacts
-- Get Contact
-- Update Contact
-- Delete Contact
+- User Authentication (Register, Login, JWT)
+- Contact Management (CRUD operations)
+- MongoDB Integration
+- Error Handling
+- Input Validation
+- Automated Testing
 
-## Technologies Used
+## Prerequisites
 
-- Node.js
-- Express.js
+- Node.js (v14 or higher)
 - MongoDB
-- JWT for authentication
-- bcrypt for password hashing
+- npm or yarn
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or later)
-- MongoDB
-
-### Installation
+## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/leovxyz/UserBackendAPI.git
-   ```
+```bash
+git clone https://github.com/yourusername/userBackendAPI.git
+cd userBackendAPI
+```
 
 2. Install dependencies:
-   ```bash
-   cd UserBackendAPI
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. Set up environment variables:
-   Create a `.env` file in the root directory and add the following:
-   ```bash
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/userbackendapi
-   JWT_SECRET=your_jwt_secret_key
-   ```
+   - Copy `.env.example` to create your `.env` file:
+     ```bash
+     cp .env.example .env
+     ```
+   - Update the values in `.env` with your configuration:
+     - `PORT`: API server port (default: 3000)
+     - `MONGODB_URI`: Your MongoDB connection string
+     - `ACCESS_TOKEN_SECRET`: JWT signing secret (generate a secure random string)
+     - `JWT_SECRET`: Backup JWT secret (generate a secure random string)
+     - `NODE_ENV`: Environment setting (development/test/production)
 
-4. Start the server:
-   ```bash
-   npm run dev
-   ```
+## Running the Application
+
+Development mode:
+```bash
+npm start
+```
+
+Run tests:
+```bash
+npm test
+```
+
+## API Endpoints
+
+### Users
+- `POST /api/users/register` - Register new user
+- `POST /api/users/login` - Login user
+- `GET /api/users/current` - Get current user (Protected)
+- `DELETE /api/users/delete-user` - Delete user (Protected)
+
+### Contacts
+- `GET /api/contacts` - Get all contacts (Protected)
+- `POST /api/contacts` - Create contact (Protected)
+- `GET /api/contacts/:id` - Get single contact (Protected)
+- `PUT /api/contacts/:id` - Update contact (Protected)
+- `DELETE /api/contacts/:id` - Delete contact (Protected)
+
+## Testing
+
+The API includes comprehensive test suites:
+- User authentication tests
+- Contact management tests
+- Error handling tests
+
+Run tests with:
+```bash
+npm test
+```
 
 ## Documentation
 
-The documentation for how to test the UserBackendAPI endpoints is available in the [THUNDERCLIENT.MD](THUNDERCLIENT.MD) file.
-The Architecture of the API is available in the [ARCHITECTURE.MD](ARCHITECTURE.MD) file.
+- Postman collection included for API testing
+
+## Error Handling
+
+The API implements proper error handling with appropriate HTTP status codes and error messages.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
--
-
-/ Leo
+MIT License
